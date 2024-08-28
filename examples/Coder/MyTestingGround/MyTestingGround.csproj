@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fody">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Grpc.Net.Client" />
+    <PackageReference Include="Grpc.Net.ClientFactory" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" />
+    <PackageReference Include="OpenIddict.Client" />
+    <PackageReference Include="PropertyChanged.Fody" />
+    <PackageReference Include="Dapplo.Microsoft.Extensions.Hosting.AppServices">
+	</PackageReference>
+      <PackageReference Include="Dapplo.Microsoft.Extensions.Hosting.Wpf">
+	</PackageReference>
+    	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
+	</PackageReference>
+    	  <PackageReference Include="OpenIddict.Client.SystemIntegration">
+	</PackageReference>
+	<PackageReference Include="OpenIddict.Client.SystemNetHttp">
+	</PackageReference>
+            <PackageReference Include="OpenIddict.Client.WebIntegration">
+	</PackageReference>
+	<PackageReference Include="OpenIddict.EntityFrameworkCore">
+	</PackageReference>
+	<PackageReference Include="Protobuf.Grpc.ClientFactory" />
+	<PackageReference Include="System.Net.Http" />
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+          </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
+	  <ProjectReference Include="..\MyApi.Contract\MyApi.Contract.csproj" />
+    <ProjectReference Include="..\Shared\Shared.csproj" />
+  </ItemGroup>
+
+</Project>

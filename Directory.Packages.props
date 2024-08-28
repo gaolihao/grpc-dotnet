@@ -47,6 +47,24 @@
     <PackageVersion Include="Grpc.HealthCheck" Version="$(GrpcDotNetPackageVersion)" />
     <PackageVersion Include="Grpc.AspNetCore.HealthChecks" Version="$(GrpcDotNetPackageVersion)" />
     <PackageVersion Include="Grpc.Auth" Version="$(GrpcDotNetPackageVersion)" />
+    <PackageVersion Include="Protobuf.Grpc" Version="1.0.170" />
+    <PackageVersion Include="Protobuf.Grpc.ClientFactory" Version="1.0.170" />
+    <PackageVersion Include="OpenIddict.EntityFrameworkCore" Version="5.6.0" />
+    <PackageVersion Include="Dapplo.Microsoft.Extensions.Hosting.Wpf" Version="1.0.14" />
+    <PackageVersion Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+    <PackageVersion Include="OpenIddict.Client.WebIntegration" Version="5.6.0" />
+    <PackageVersion Include="OpenIddict.Client" Version="5.6.0" />
+    <PackageVersion Include="Dapplo.Microsoft.Extensions.Hosting.AppServices" Version="1.0.14" />
+    <PackageVersion Include="OpenIddict.Client.SystemIntegration" Version="5.6.0" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.6" />
+    <PackageVersion Include="Fody" Version="6.8.1" />
+    <PackageVersion Include="PropertyChanged.Fody" Version="4.1.0" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.6" />
+    <PackageVersion Include="System.Net.Http" Version="4.3.4" />
+    <PackageVersion Include="OpenIddict.Client.SystemNetHttp" Version="4.3.4" />
+    <PackageVersion Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.8" />
+    <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+
 
     <!-- OpenTelemetry -->
     <PackageVersion Include="OpenTelemetry" Version="$(OpenTelemetryPackageVersion)" />
