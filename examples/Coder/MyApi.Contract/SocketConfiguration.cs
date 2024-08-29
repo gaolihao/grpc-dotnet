@@ -1,4 +1,4 @@
-﻿namespace MyApi.Contract;
+namespace MyApi.Contract;
 
 /// <summary>
 /// Represents socket configuration.

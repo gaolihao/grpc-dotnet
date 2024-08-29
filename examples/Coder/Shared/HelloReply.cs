@@ -1,4 +1,4 @@
-﻿#region Copyright notice and license
+#region Copyright notice and license
 
 // Copyright 2019 The gRPC Authors
 //
@@ -18,12 +18,11 @@
 
 using System.Runtime.Serialization;
 
-namespace Shared
+namespace Shared;
+
+[DataContract]
+public class HelloReply
 {
-    [DataContract]
-    public class HelloReply
-    {
-        [DataMember(Order = 1)]
-        public string? Message { get; set; }
-    }
+    [DataMember(Order = 1)]
+    public string? Message { get; set; }
 }

@@ -1,9 +1,8 @@
-﻿namespace MyApi.Contract;
+namespace MyApi.Contract;
 using ProtoBuf.Grpc;
 using Grpc.Core;
 using ProtoBuf;
 using ProtoBuf.Grpc.Configuration;
-
 
 /// <summary>
 /// Interface for synchronized scrolling service.

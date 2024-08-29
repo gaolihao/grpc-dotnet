@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Hosting;
 using System.Configuration;
 using System.Data;
 using System;
@@ -55,52 +55,6 @@ public partial class App : Application
                     options.UseSqlite($"Filename={Path.Combine(Path.GetTempPath(), "openiddict-mimban20-client.sqlite3")}");
                     options.UseOpenIddict();
                 });
-                
-
-                /*
-                services.AddOpenIddict()
-
-                    // Register the OpenIddict core components.
-                    .AddCore(options =>
-                    {
-                        // Configure OpenIddict to use the Entity Framework Core stores and models.
-                        // Note: call ReplaceDefaultEntities() to replace the default OpenIddict entities.
-                        options.UseEntityFrameworkCore()
-                                .UseDbContext<DbContext>();
-                    })
-
-                    // Register the OpenIddict client components.
-                    .AddClient(options =>
-                    {
-                        // Note: this sample uses the authorization code flow,
-                        // but you can enable the other flows if necessary.
-                        options.AllowAuthorizationCodeFlow()
-                                .AllowRefreshTokenFlow();
-
-                        // Register the signing and encryption credentials used to protect
-                        // sensitive data like the state tokens produced by OpenIddict.
-                        options.AddDevelopmentEncryptionCertificate()
-                                .AddDevelopmentSigningCertificate();
-
-                        // Add the operating system integration.
-                        options.UseSystemIntegration();
-
-                        // Register the System.Net.Http integration and use the identity of the current
-                        // assembly as a more specific user agent, which can be useful when dealing with
-                        // providers that use the user agent as a way to throttle requests (e.g Reddit).
-                        options.UseSystemNetHttp()
-                                .SetProductInformation(typeof(App).Assembly);
-
-                        // Add a client registration matching the client application definition in the server project.
-                        options.AddRegistration(new OpenIddictClientRegistration
-                        {
-                            Issuer = new Uri("https://localhost:5232", UriKind.Absolute),
-
-                            ClientId = "console_app",
-                            RedirectUri = new Uri("/", UriKind.Relative)
-                        });
-                    });
-            */
 
                 // Register the worker responsible for creating the database used to store tokens
                 // and adding the registry entries required to register the custom URI scheme.
@@ -109,7 +63,6 @@ public partial class App : Application
 
                 services.AddHostedService<Worker>();
                 services.AddSingleton<IMainViewModel, MainViewModel>();
-                services.AddSingleton<IHubClient, HubClient>();
                 services.AddSingleton<IInstanceManagerClientFeatureList, InstanceManagerClientFeatureList>();
                 
                 

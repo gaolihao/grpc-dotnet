@@ -1,4 +1,4 @@
-﻿#region Copyright notice and license
+#region Copyright notice and license
 
 // Copyright 2019 The gRPC Authors
 //
@@ -20,12 +20,11 @@ using System.ServiceModel;
 using System.Threading.Tasks;
 using ProtoBuf.Grpc;
 
-namespace Shared
+namespace Shared;
+
+[ServiceContract]
+public interface IGreeterService
 {
-    [ServiceContract]
-    public interface IGreeterService
-    {
-        [OperationContract]
-        Task<HelloReply> SayHelloAsync(HelloRequest request, CallContext context = default);
-    }
+    [OperationContract]
+    Task<HelloReply> SayHelloAsync(HelloRequest request, CallContext context = default);
 }
